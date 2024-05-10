@@ -53,4 +53,4 @@ allPrmoises
    })
    .catch((error)=>{
       console.log('Error API failed')
-   })
+   }).finally(()=> console.log('End'))

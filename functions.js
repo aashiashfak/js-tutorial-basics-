@@ -2,7 +2,7 @@
 // high-order and callback fn 
 
 function highorder(fun){
-    console.log('executing ho')
+    console.log('executing highorder fn ')
     fun();
 }
 function callback(){
@@ -59,7 +59,6 @@ const obj1 = {
     }
 };
 
-// Define obj2
 const obj2 = {
   name: "Mathew",
   age: 35,
@@ -68,10 +67,7 @@ const obj2 = {
 // Connect obj1 properties and methods to obj2 using prototypes
 Object.setPrototypeOf(obj2, obj1);
 
-// Access properties and method of obj1 from obj2
-console.log(obj2.name); // Output: John
-console.log(obj2.age); // Output: 30
-obj2.greet(); // Output: Hello, my
+obj2.greet();
 obj1.greet();
 
 
@@ -100,3 +96,22 @@ getData((value)=>{
         })
     })
 })
+
+
+// call appyly bind 
+//call
+
+function greets(){
+    return 'hey Hello '+ this.name 
+}
+var person = {name: 'Alice'};
+
+console.log(greets.call(person))
+
+// apply
+
+function greets1(greeting){
+    return greeting+","+this.name
+}
+
+console.log(greets1.apply(person,['Hello']))
