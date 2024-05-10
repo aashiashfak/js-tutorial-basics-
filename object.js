@@ -10,4 +10,36 @@ const person  = {
 
 person.greet()
 
+// to get keys of an obj 
 
+console.log(Object.keys(person))
+
+
+// to get values of an obj 
+
+console.log(Object.values(person))
+
+// to get both key and values as sub arrays in an array
+
+console.log(Object.entries(person));
+
+// to merge two  obj  
+
+const obj1 = { a: 1 };
+const obj2 = { b: 2 };
+const obj3 = { c: 3 };
+const mergedObj = Object.assign({}, obj1, obj2, obj3);
+console.log(mergedObj); 
+
+
+// own property fn return bool value 
+
+const obj = { a: 1, b: 2 };
+console.log(obj.hasOwnProperty('a'));
+console.log(obj.hasOwnProperty('name')); 
+
+// freeze obj then it will be immutable 
+
+Object.freeze(obj)
+obj.a = 2 
+console.log(obj.a)

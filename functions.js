@@ -73,3 +73,30 @@ console.log(obj2.name); // Output: John
 console.log(obj2.age); // Output: 30
 obj2.greet(); // Output: Hello, my
 obj1.greet();
+
+
+
+// call back hell 
+
+function getData(callback){
+    setTimeout(()=> {
+        callback(5);
+    },1000)
+}
+function getData1(callback) {
+  setTimeout(() => {
+    callback(5);
+  }, 1000);
+}
+function getData2(callback) {
+  setTimeout(() => {
+    callback(5);
+  }, 1000);
+}
+getData((value)=>{
+    getData1((value1)=>{
+        getData2((value2)=>{
+            console.log(value1+value2+value)
+        })
+    })
+})
