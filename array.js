@@ -88,7 +88,7 @@ console.log(animals.slice(3,6)); // first parameter indicates the index and para
 
 // splice 
 
-animals.splice(1,0,'Crow'); // no deletion adding an element to first index
+animals.splice(1,0,'Crow'); // no deletion, adding an element to first index
 console.log(animals);
 
 animals.splice(1,1,'Lion') // deleting 1 element after index one adding a element (so here an updation happened ) 

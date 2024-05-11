@@ -24,3 +24,15 @@ const {firstName, lastName, age}=person;
 console.log(firstName)
 
 
+// practise 
+
+function sum (...args){
+    let x = 0
+    for(i=0; i<args.length; i++){
+        x += args[i]
+    }
+    return x
+}
+
+console.log(sum(1,2,3,4,5))
+

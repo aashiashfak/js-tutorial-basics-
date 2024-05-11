@@ -102,16 +102,23 @@ getData((value)=>{
 //call
 
 function greets(){
-    return 'hey Hello '+ this.name 
+    return 'hey Hello '+ person.name 
 }
 var person = {name: 'Alice'};
 
-console.log(greets.call(person))
+console.log(greets())
 
 // apply
 
-function greets1(greeting){
-    return greeting+","+this.name
+function greets1(msg1, msg2){
+    return `${msg1} ${this.name}. ${msg2}`
 }
+console.log(greets1.apply(person,['Hello','How are you']))
 
-console.log(greets1.apply(person,['Hello']))
+
+// bind 
+function greets2(msg){
+    console.log(`${msg} ${this.name}`)
+}
+const greetBind = greets2.bind(person,'Helloi')
+greetBind()
