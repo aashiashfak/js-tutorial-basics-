@@ -65,3 +65,25 @@ console.log(person2.firstName)
 console.log(person2.LastName)
 console.log(person2.fullName)
 person2.greet()
+
+// destructuring object
+
+let states = {
+    statusi : 'Kerala',
+    language : 'Malayalam',
+    totalDistricts: '14',
+    districts:{
+        d1:'Malappuram',
+        d2:'Kannur',
+        d3:'Kozhikkode'
+    }
+}
+
+let = {statusi, language, totalDistricts, districts:{d1,d2,d3}} = states
+
+console.log(statusi)
+console.log(language)
+console.log(totalDistricts)
+console.log(d1)
+console.log(d2) 
+console.log(d3) 

@@ -97,4 +97,20 @@ console.log(animals)
 animals.splice(3,2) // deleting 2 elements from index 3
 console.log(animals);
 
+// destructuring array 
+
+const ar1 = ['kerala', 'Malayalam', 14,['Malappuram', 'Kannur','Kozhikode']]
+let = [state , language, Districts, [d1, d2, d3]] = ar1
+console.log(state)
+console.log(language)
+console.log(Districts)
+console.log(d1)
+console.log(d2)
+console.log(d3)
+
+
+
+
+// destructing array 
+
 
