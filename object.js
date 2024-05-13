@@ -43,3 +43,25 @@ console.log(obj.hasOwnProperty('name'));
 Object.freeze(obj)
 obj.a = 2 
 console.log(obj.a)
+
+
+
+// Enhanced Object literals
+
+const firstName = "Jhoan"
+const LastName = "Doe"
+
+const person2 = {
+    firstName,
+    LastName,
+    ['fullName']:`${firstName} ${LastName}`,
+    greet(){
+        console.log(`Hello ${firstName} ${LastName}`);
+    }
+
+}
+
+console.log(person2.firstName)
+console.log(person2.LastName)
+console.log(person2.fullName)
+person2.greet()

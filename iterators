@@ -1,0 +1,14 @@
+const iterable = {
+    [Symbol.iterator]() {
+        let i = 0;
+        return {
+            next() {
+                return { value: i++, done: i > 3 };
+            }
+        };
+    }
+};
+
+for (const item of iterable) {
+    console.log(item); // Output: 0, 1, 2
+}
